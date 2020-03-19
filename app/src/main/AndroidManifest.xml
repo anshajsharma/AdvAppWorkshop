@@ -12,8 +12,14 @@
         android:roundIcon="@drawable/codeforces"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PaytmPayment"></activity>
-        <activity android:name=".PayThrough" >
+        <activity android:name=".CheckoutActivity"></activity>
+        <activity android:name=".PaytmPayment" />
+
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
+
+        <activity android:name=".PayThrough">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,9 +27,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ViewOrCompareProfile" />
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
